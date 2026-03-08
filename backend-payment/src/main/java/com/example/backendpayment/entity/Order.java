@@ -31,8 +31,12 @@ public class Order {
     private LocalDateTime createdAt;
 
     @OneToMany
+    @JoinColumn(name = "orderitem_id")
     private List<OrderItem> items = new ArrayList<>();
 
+    @OneToOne
+    @JoinColumn(name = "payment_id")
+    private Payment payment;
     @PrePersist
     public void prePersist() {
         this.createdAt = LocalDateTime.now();

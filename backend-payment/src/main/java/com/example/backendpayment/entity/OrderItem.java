@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "orderitems")
+@Table(name = "order_item")
 @Getter
 @Setter
 @NoArgsConstructor
